@@ -22,7 +22,9 @@ namespace Edvs
 		SingleEventStream(const std::string& uri)
 		{
 			open(uri);
-			run();
+			if(is_open()) {
+				run();
+			}			
 		}
 
 		~SingleEventStream()
@@ -153,7 +155,9 @@ namespace Edvs
 		MultiEventStream(const std::vector<std::string>& uris)
 		{
 			open(uris);
-			run();
+			if(is_open()) {
+				run();
+			}		
 		}
 
 		unsigned num_streams() const
