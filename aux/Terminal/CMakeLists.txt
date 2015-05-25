@@ -11,4 +11,5 @@ ADD_EXECUTABLE(${PROJECT_NAME}
 TARGET_LINK_LIBRARIES(${PROJECT_NAME}
 	Edvs
 	boost_program_options
+	pthread
 )
